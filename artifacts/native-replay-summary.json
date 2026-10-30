@@ -1,0 +1,15 @@
+{
+  "test": "saved_real_EEG_native_replay",
+  "config_id": "85982e1472c1649f86cc8a9fd9051bd0bd28a492a51ed1bcc1b1148a721498de",
+  "input_samples": 45000,
+  "input_seconds": 90.0,
+  "feature_windows": 109,
+  "amplitude_valid_windows": 43,
+  "ica_ranks": [
+    8
+  ],
+  "removed_components": [],
+  "first_window_source_offset_seconds": 35.998,
+  "hardware": false,
+  "note": "Runs firmware DSP on Linux; not ESP32 timing or physiological validation."
+}

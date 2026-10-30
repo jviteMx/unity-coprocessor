@@ -1,0 +1,6 @@
+numpy>=1.26,<3
+scipy>=1.11,<2
+platformio==6.2.0
+pyserial==3.5
+pylsl>=1.17,<2
+esptool==4.5.1

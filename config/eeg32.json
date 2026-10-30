@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "sample_rate_hz": 500,
+  "channels": [
+    "FP1",
+    "FP2",
+    "F7",
+    "F3",
+    "Fz",
+    "F4",
+    "F8",
+    "FC5",
+    "FC1",
+    "FC2",
+    "FC6",
+    "T7",
+    "C3",
+    "Cz",
+    "C4",
+    "T8",
+    "CP5",
+    "CP1",
+    "CP2",
+    "CP6",
+    "P7",
+    "P3",
+    "Pz",
+    "P4",
+    "P8",
+    "POz",
+    "O1",
+    "Oz",
+    "O2",
+    "AFz",
+    "A1",
+    "A2"
+  ],
+  "input_unit": "uV",
+  "reference": {
+    "mode": "average"
+  },
+  "filter": {
+    "low_hz": 1.0,
+    "high_hz": 45.0,
+    "order": 4,
+    "notch_hz": 60.0,
+    "notch_q": 30.0,
+    "settle_seconds": 2.0
+  },
+  "ica": {
+    "mode": "calibrate_then_freeze",
+    "calibration_seconds": 10.0,
+    "training_seconds": 20.0,
+    "learning_rate": 0.005,
+    "rank_tolerance": 0.0001,
+    "removal": "frontal_projection",
+    "frontal_channels": [
+      "FP1",
+      "FP2"
+    ],
+    "frontal_fraction_threshold": 0.35,
+    "remove_components": []
+  },
+  "welch": {
+    "window_seconds": 4.0,
+    "segment_samples": 512,
+    "overlap_samples": 256,
+    "hop_seconds": 0.5
+  },
+  "bands": {
+    "theta": [
+      4.0,
+      8.0
+    ],
+    "alpha": [
+      8.0,
+      13.0
+    ],
+    "beta": [
+      13.0,
+      30.0
+    ]
+  },
+  "ratios": [
+    {
+      "name": "attention",
+      "channels": [
+        "FP1",
+        "FP2"
+      ],
+      "aggregate": "mean",
+      "expression": "beta / theta"
+    },
+    {
+      "name": "engagement",
+      "channels": [
+        "Cz",
+        "C4",
+        "C3"
+      ],
+      "expression": "beta / (alpha + theta)"
+    }
+  ],
+  "quality": {
+    "max_abs_uv": 150.0,
+    "min_denominator_uv2": 1e-06
+  },
+  "lsl": {
+    "stream_name": "EEG",
+    "allow_missing_labels": false
+  },
+  "unity": {
+    "host": "127.0.0.1",
+    "port": 9877
+  }
+}

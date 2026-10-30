@@ -1,0 +1,43 @@
+{
+  "board": "adafruit_matrixportal_esp32s3",
+  "chip": "esp32s3",
+  "platform": "espressif32@6.9.0",
+  "config_id": "85982e1472c1649f86cc8a9fd9051bd0bd28a492a51ed1bcc1b1148a721498de",
+  "flash_mode": "dio",
+  "flash_freq": "80m",
+  "flash_size": "8MB",
+  "images": [
+    {
+      "offset": "0x0000",
+      "file": "bootloader.bin",
+      "sha256": "980d668579277973efaa0773542488a2bde60c1f313e8387fd6f86ec1e2c799e"
+    },
+    {
+      "offset": "0x8000",
+      "file": "partitions.bin",
+      "sha256": "a4b273cfa878c78ab2531cdc28544914beafb3631dd9054c47007690efe9dcff"
+    },
+    {
+      "offset": "0xe000",
+      "file": "boot_app0.bin",
+      "sha256": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0"
+    },
+    {
+      "offset": "0x410000",
+      "file": "tinyuf2.bin",
+      "sha256": "be2b267579804c6285ab5d814c4e9a48da7875a32410c982405643437dc80d86"
+    },
+    {
+      "offset": "0x10000",
+      "file": "firmware.bin",
+      "sha256": "42351e59e757f1eb525697d32f2b5b1672985fbc09f60fd89b2b8ac30ab0793b"
+    }
+  ],
+  "sources": {
+    "firmware/include/pipeline.h": "f8a6beb8da4b7191f1856c6834a7eb0980495679e73cf5c2062d30fc929cd11b",
+    "firmware/include/wire.h": "ee22ee47efc6730b02fcb4dfada4494ddaa5fd4f2d4f7b7f18c4a26bea4eace0",
+    "firmware/src/main.cpp": "ecc3c17dbb2d60706434c8c5dac2d5d33d1f11a8ab93a629c2499d436f3f955f",
+    "firmware/include/generated_config.h": "0d63e9e45184c6616d4e100085aab0a3b830b81c4ab6dcb2ef38d6a2277c2726",
+    "firmware/platformio.ini": "b5e7cf4f9593ad431ed81962cdd7d7bd08bdaf79e6c0825b5dd811bc2f5f3134"
+  }
+}
